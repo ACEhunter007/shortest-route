@@ -104,6 +104,7 @@ int min_dis_find(int visited[],int *index)
 
 void dijkstras_runner()
 {
+   // printf("enter number of test cases");
     int s;
    scanf("%d",&s);
 for(int x=0;x<s;x++)
@@ -125,6 +126,7 @@ for(int x=0;x<s;x++)
      scanf("%d",&p);
      for(int z=0;z<p;z++)
      {
+       //printf("enter neighbour index and the cost of transport");
         scanf("%d %d",&nr,&cost);
         addconnection(y,nr-1,cost);
      }
