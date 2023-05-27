@@ -6,12 +6,35 @@
 #define MAX_COST 200000
 #define MAX_NO 10000
 int graph[MAX_NO][MAX_NO];
-int n;
+int n; //number of cities
 char cities[MAX_NO][MAX_CITY_LENS];
 int previous[MAX_NO];
 int dis[MAX_NO];
 
 int min_dis_find(int visited[],int *index);
+
+//path finding algoritm;
+
+/*void path_finder(int endindex,int startindex)
+{
+    int path[MAX_NO];
+    int index=endindex;
+    int number=0;
+    while(index!=startindex)
+    {
+        path[number]=previous[index]+1;
+        number++;
+        index=previous[index];
+    }
+
+    
+    printf("path is ");
+    for(int g=number-1;g>=0;g--)
+    printf("%d-",path[g]);
+    printf("%d",endindex+1);
+    printf("\n");
+
+}*/
 
 void initialise()
 {
@@ -86,6 +109,8 @@ void dijkstras(char start[], char end[])
 
     //printf("The minimum cost from city %s to city %s is ", cities[startindex],cities[endindex]);
     printf("%d\n",dis[endindex]);
+    //if you also want the path
+    //path_finder(endindex,startindex);
 }
 
 int min_dis_find(int visited[],int *index)
@@ -135,7 +160,7 @@ for(int x=0;x<s;x++)
    // printf("paths you want to find");
     int r;
     scanf("%d",&r);
-    char sourcestore[100][11],destinationstore[100][11];
+    char sourcestore[100][10],destinationstore[100][10];
 
 for(int m=0;m<r;m++)
 {
