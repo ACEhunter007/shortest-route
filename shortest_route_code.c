@@ -13,7 +13,7 @@ int dis[MAX_NO];
 
 int min_dis_find(int visited[],int *index);
 
-//path finding algoritm;
+//path finding funtion;
 
 /*void path_finder(int endindex,int startindex)
 {
