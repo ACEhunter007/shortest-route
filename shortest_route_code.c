@@ -135,7 +135,7 @@ for(int x=0;x<s;x++)
    // printf("paths you want to find");
     int r;
     scanf("%d",&r);
-    char sourcestore[100][10],destinationstore[100][10];
+    char sourcestore[100][11],destinationstore[100][11];
 
 for(int m=0;m<r;m++)
 {
